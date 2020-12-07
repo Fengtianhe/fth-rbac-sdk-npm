@@ -1,0 +1,22 @@
+{
+  "name": "fth-rbac-client",
+  "version": "0.0.1",
+  "description": "client of fth-rbac ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fengtianhe/fth-rbac-sdk-npm.git"
+  },
+  "keywords": [
+    "fth-rbac"
+  ],
+  "author": "fengtianhe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fengtianhe/fth-rbac-sdk-npm/issues"
+  },
+  "homepage": "https://github.com/Fengtianhe/fth-rbac-sdk-npm#readme"
+}
