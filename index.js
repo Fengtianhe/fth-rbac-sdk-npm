@@ -1,5 +1,3 @@
-import './xhr';
-
 const FthRbacClient = {
   serverDomain: null,
 
@@ -27,20 +25,17 @@ const FthRbacClient = {
   menu: function (roleId) {
     this.checkDomain();
     this.checkAppId();
-
     return new Promise((resolve, reject) => {
-      new MyXhr({
-        'options': {
-          'method': 'get',
-          'url': `${this.FthRbacServerDomain}/sdk/resource/menu?roleId=${roleId}`
-        },
-        'success': function (data) {
-          console.log(data);
-          resolve(data);
-        },
-        'error': function (error) {
-          reject(error);
-        }
+      const url = `${this.serverDomain}/sdk/resource/menu?roleId=${roleId}&client=npm`;
+      fetch(url, {
+        method: 'GET',
+        credentials: 'include'
+      }).then(function (response) {
+        return response.text();
+      }).then(function (responseText) {
+        resolve(responseText);
+      }).catch(e => {
+        reject(e);
       });
     });
   }
