@@ -1,6 +1,6 @@
 {
   "name": "fth-rbac-client",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "client of fth-rbac ",
   "main": "index.js",
   "scripts": {
